@@ -70,7 +70,7 @@ function chequeForm() {
 	echo '</div>';
 	
 
-	if(isset($_POST['amount_word'])){
+	if(!empty($_POST['amount_word'])){
 		$table = 'cheque_data';
 		$data = array('payee_name' => $_POST["payee_name"], 'amount' => $_POST["amount"], 'amount_word' => $_POST["amount_word"]);
 		//$format = array('%s','%d');
